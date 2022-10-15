@@ -1,6 +1,6 @@
 class Module(object):
-    name = ''
-    info = ''
+    name = ''  # Короткое описание / название
+    info = ''  #
 
     def __init__(self):
         pass

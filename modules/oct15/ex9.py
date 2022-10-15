@@ -2,8 +2,9 @@ from modules.module import Module
 
 
 class Child(Module):
-
-    info = "Напишите программу для вычисления индекса массы тела (ИМТ). ИМТ = ВЕС / РОСТ2"
+    name = "Индекс массы тела"
+    info = "Напишите программу для вычисления индекса массы тела " \
+           "(ИМТ). ИМТ = ВЕС / РОСТ2"
 
     def run(self, **kwargs):
         mass = float(input('mass > '))

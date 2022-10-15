@@ -2,6 +2,7 @@ from modules.module import Module
 
 
 class Child(Module):
+    name = "Квадрат, Куб и дальше"
     info = "Напишите, которая считывает число " \
            "и отображает квадрат, куб и четвертую степень."
     def run(self, **kwargs):

@@ -1,14 +1,24 @@
-from modules import module_list
+from modules import bases
+
+def safe_input(text, min, max):
+    while True:
+        num = int(input(text))
+        if (min <= num) and (num <= max):
+            return num
 
 if __name__ == '__main__':
-    print("Выберите задание")
-    for i, module in enumerate(module_list):
-        print(f"{i+1}: {module.info}")
-    print("\n-1: exit")
+    print("Выберите базу: ")
+    for i, base in enumerate(bases):
+        print(f"{i}: {base[0]}")
+
+    base = bases[safe_input(" база > ", 0, len(bases) - 1)][1]
+
     while True:
-        a = int(input(" номер задания >> "))
+        a = input(" номер задания >> ")
         print()
-        if (a >= 0) and (a <= len(module_list)):
-            module_list[a-1]().run()
-        else:
-            print("exiting")
+        if a == 'h':
+            a
+        elif a.isdecimal():
+            a = int(a)
+            if (0 <= a) and (a <= len(base)):
+                base[a]().run()

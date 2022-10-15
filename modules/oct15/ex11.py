@@ -2,9 +2,11 @@ from modules.module import Module
 
 
 class Child(Module):
+    name = "Существует ли треугольник?"
     info = " Напишите программу, чтобы проверить," \
            " могут ли три заданные длины сторон " \
            "(целые числа) образовать треугольник или нет."
+
     def run(self, **kwargs):
         a = float(input("a > "))
         b = float(input("b > "))
